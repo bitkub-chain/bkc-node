@@ -5,11 +5,11 @@
 
 ## Prerequisites
    - #### **Linux Instance**
-    - ##### OS - Ubuntu version 18.04 
-    - ##### Specifications
-        - 4 vCPUs
-        - 8 GiB of RAM
-        - 1 TB of Disk
+        - ##### OS - Ubuntu version 18.04 
+        - ##### Specifications
+           - 4 vCPUs
+           - 8 GiB of RAM
+           - 1 TB of Disk
     
    - #### **Security Group / Firewall Rules** 
         - ##### Allow Inbound
