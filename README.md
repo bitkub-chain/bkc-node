@@ -1,7 +1,7 @@
 # Bitkub Chain Node
 
 ## Introduction
-> [Bitkub Chain](https://www.bitkubchain.com)  is an infrastructure of an ecosystem using decentralized technology “Blockchain” which allows anyone to interact with decentralized applications or their digital assets with a very low transaction fee, high-speed confirmation time, trustless and  transparency to everyone.
+[Bitkub Chain](https://www.bitkubchain.com)  is an infrastructure of an ecosystem using decentralized technology “Blockchain” which allows anyone to interact with decentralized applications or their digital assets with a very low transaction fee, high-speed confirmation time, trustless and  transparency to everyone.
 
 ## Prerequisites
    - #### **Linux Instance**

@@ -1,6 +1,6 @@
 [Eth]
 NetworkId = 96
-SyncMode = "fast"
+SyncMode = "full"
 DiscoveryURLs = []
 NoPruning = false
 NoPrefetch = false
@@ -22,7 +22,7 @@ RPCTxFeeCap = 1e+01
 
 [Eth.Miner]
 GasFloor = 30000000
-GasCeil = 8000000
+GasCeil = 30000000
 GasPrice = 50000000000
 Recommit = 3000000000
 Noverify = false
