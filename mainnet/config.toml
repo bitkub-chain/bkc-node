@@ -23,7 +23,7 @@ RPCTxFeeCap = 1e+01
 [Eth.Miner]
 GasFloor = 60000000
 GasCeil = 60000000
-GasPrice = 50000000000
+GasPrice = 5000000000
 Recommit = 3000000000
 Noverify = false
 
@@ -43,12 +43,12 @@ Locals = []
 NoLocals = true
 Journal = "transactions.rlp"
 Rejournal = 3600000000000
-PriceLimit = 50000000000
+PriceLimit = 5000000000
 PriceBump = 10
 AccountSlots = 16
-GlobalSlots = 4096
+GlobalSlots = 10240
 AccountQueue = 64
-GlobalQueue = 1024
+GlobalQueue = 4096
 Lifetime = 10800000000000
 
 [Eth.GPO]
