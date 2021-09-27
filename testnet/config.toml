@@ -1,7 +1,6 @@
 [Eth]
 NetworkId = 25925
 SyncMode = "full"
-DiscoveryURLs = []
 NoPruning = false
 NoPrefetch = false
 LightPeers = 100
