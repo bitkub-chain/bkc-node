@@ -35,9 +35,6 @@ function geth-install {
   echo "----------Cloning go-ethereum git----------"
   git clone https://github.com/ethereum/go-ethereum.git
   cd go-ethereum/
-  ls -all
-  git checkout v1.9.24
-
 
   echo "----------Installing Geth command----------"
   make geth
