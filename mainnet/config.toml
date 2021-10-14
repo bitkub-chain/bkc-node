@@ -47,7 +47,7 @@ PriceLimit = 5000000000
 PriceBump = 10
 AccountSlots = 16
 GlobalSlots = 10240
-AccountQueue = 64
+AccountQueue = 1024
 GlobalQueue = 4096
 Lifetime = 10800000000000
 
