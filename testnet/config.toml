@@ -56,7 +56,7 @@ Percentile = 60
 MaxPrice = 500000000000
 
 [Node]
-DataDir = "."
+DataDir = "/bkc-node/testnet/data"
 InsecureUnlockAllowed = true
 IPCPath = "geth.ipc"
 HTTPHost = "0.0.0.0"
