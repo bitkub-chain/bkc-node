@@ -1,6 +1,6 @@
 [Eth]
 NetworkId = 96
-SyncMode = "snap"
+SyncMode = "full"
 NoPruning = false
 NoPrefetch = false
 LightPeers = 100
