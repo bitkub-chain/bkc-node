@@ -121,7 +121,12 @@ systemctl stop geth.service
 ```bash
 mv /root/bkc-node/bkc-mainnet/node0/startnode0.sh.bak /root/bkc-node/bkc-mainnet/node0/startnode0.sh
 ```
-### 3. Start geth.service
+### 3. Remove new disk from /etc/fstab
+```bash
+nano /etc/fstab
+```
+
+### 4. Start geth.service
 ```bash
 systemctl start geth.service
 ```
