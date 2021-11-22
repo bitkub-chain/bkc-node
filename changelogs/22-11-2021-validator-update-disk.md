@@ -72,7 +72,7 @@ mkdir -p /bkc-node/mainnet/data/keystore
 
 ### 6. Copy Keystore to new destination
 ```bash
-cp -rp /root/bkc-node/bkc-mainnet/node0/keystore /bkc-node/mainnet/data/keystore
+cp -p /root/bkc-node/bkc-mainnet/node0/keystore/* /bkc-node/mainnet/data/keystore/
 ```
 ### 7. Copy nodekey to new destination
 ```
@@ -86,19 +86,15 @@ cp -p /root/bkc-node/bkc-mainnet/node0/startnode0.sh /root/bkc-node/bkc-mainnet/
 ```bash
 nano /root/bkc-node/bkc-mainnet/node0/startnode0.sh
 ```
-- `--bootnodes` 
-```
-enode://edf49592304cfb4b1b54813adfe92c0ddae9f1c8f30d43f6565c08795b429c317b59eea78b330b2d845c26cb2f80f40915927d5dcddebc9025937cf1cf328e32@94.74.118.9:30303,enode://f9430f3733b5104415d8742483b671dfe41e1067e762382b8681ddae2664c940f212479a3ee5a6081e4dd6c21c8209b3a5d0317070e55e07abdab35c5b9b1738@110.238.117.147:30303,enode://2279c2f50e28c6c6dd1ed4f9f97683ed1c97fb3f7c5dd5ccbdeccd6e681988052048a4e2c611ead0e8e3874537a398cd1346505401e1fb9d1646f673ab734660@159.138.241.128:30303,enode://898056729fe1c3cc07a5fdf86b5f172e95e69bbc22edb066a3b9f80d734e8a2865bf4496cc1b2a4c3a1053afbca32b2cfc8add6e8def0166af903fbf4b20bc31@159.138.252.184:30303
-```
 
 - `--datadir`
 ```
 /bkc-node/mainnet/data
 ```
 
-- `--identity`
+- `--snaphot`
 ```
-bkc-mainnet-validator-${number}
+--snapshot=false
 ```
 
 - `--cache`
@@ -108,7 +104,7 @@ bkc-mainnet-validator-${number}
 
 ### 9. Reload systemd configuration and restart the service.
 ```bash
-systemctl daemon-reload geth.service
+systemctl daemon-reload
 systemctl restart geth.service
 ```
 ### 10. Verify and monitor (geth.service) logs
