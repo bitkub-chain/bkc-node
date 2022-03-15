@@ -10,7 +10,7 @@
     "constantinopleBlock": 0,
     "petersburgBlock": 0,
     "istanbulBlock": 0,
-    "erawanBlock": <erawan_block_number>,
+    "erawanBlock": 5519559,
     "clique": {
       "period": 5,
       "epoch": 300
