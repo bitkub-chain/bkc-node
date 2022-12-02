@@ -64,7 +64,7 @@ HTTPVirtualHosts = ["*"]
 HTTPModules = ["eth", "net", "web3", "txpool"]
 WSHost = "0.0.0.0"
 WSPort = 8546
-WSOrigin = ["*"]
+WSOrigins = ["*"]
 WSModules = ["eth", "net", "web3", "txpool"]
 GraphQLVirtualHosts = ["*"]
 
