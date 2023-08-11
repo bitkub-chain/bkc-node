@@ -11,9 +11,11 @@
     "petersburgBlock": 0,
     "istanbulBlock": 0,
     "erawanBlock": 5519559,
+    "chaophrayaBlock": 14220246,
     "clique": {
       "period": 5,
-      "epoch": 300
+      "epoch": 300,
+      "validatorContract": "0x61fAde2541dD13e855034346B4cA3576AB453FeC"
     }
   },
   "nonce": "0x0",
