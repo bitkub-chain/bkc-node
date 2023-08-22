@@ -18,13 +18,23 @@ Recommended:
 
 ### Download Geth
 ```bash
-# Linux
+# Linux amd64
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep linux-amd64 |cut -d\" -f4) -o geth.linux-amd64.tar.gz
+$ tar -xf geth.linux-amd64.tar.gz
+$ chmod -v u+x geth
+
+# Linux arm64
 $ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep linux-arm64 |cut -d\" -f4) -o geth.linux-arm64.tar.gz
 $ tar -xf geth.linux-arm64.tar.gz
 $ chmod -v u+x geth
 
-# MacOS
-$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep darwin-amd64 |cut -d\" -f4) -o geth.darwin-arm64.tar.gz
+# MacOS Intel
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep darwin-amd64 |cut -d\" -f4) -o geth.darwin-amd64.tar.gz
+$ tar -xf geth.darwin-amd64.tar.gz
+$ chmod -v u+x geth
+
+# MacOS Silicon
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep darwin-arm64 |cut -d\" -f4) -o geth.darwin-arm64.tar.gz
 $ tar -xf geth.darwin-arm64.tar.gz
 $ chmod -v u+x geth
 ```
