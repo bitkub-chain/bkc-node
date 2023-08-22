@@ -4,33 +4,41 @@
 ### Download Geth
 ```bash
 # Linux
-curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep linux-arm64 |cut -d\" -f4) -o geth.linux-arm64.tar.gz
-tar -xf geth.linux-arm64.tar.gz
-chmod -v u+x geth
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep linux-arm64 |cut -d\" -f4) -o geth.linux-arm64.tar.gz
+$ tar -xf geth.linux-arm64.tar.gz
+$ chmod -v u+x geth
 
 # MacOS
-curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep darwin-amd64 |cut -d\" -f4) -o geth.darwin-arm64.tar.gz
-tar -xf geth.darwin-arm64.tar.gz
-chmod -v u+x geth
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc/releases/latest |grep browser_ |grep darwin-amd64 |cut -d\" -f4) -o geth.darwin-arm64.tar.gz
+$ tar -xf geth.darwin-arm64.tar.gz
+$ chmod -v u+x geth
 ```
 
-### Download Config/Genesis and Initial Genesis Block
+### Download Config/Genesis
 ```bash
-$ curl -s https://raw.githubusercontent.com/bitkub-chain/bkc-node/main/mainnet/config.toml -o /Users/topj/bkchain/config.toml
+# Mainnet
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc-node/releases/latest |grep browser_ |grep mainnet |cut -d\" -f4) -o mainnet.tar.gz
+$ tar -xf mainnet.tar.gz
 
-$ curl -s https://raw.githubusercontent.com/bitkub-chain/bkc-node/main/mainnet/genesis.json -o /Users/topj/bkchain/genesis.json
-
-$ geth --datadir /Users/topj/bkchain init /Users/topj/bkchain/genesis.json
+# Testnet
+$ curl -L $(curl -s https://api.github.com/repos/bitkub-chain/bkc-node/releases/latest |grep browser_ |grep testnet |cut -d\" -f4) -o testnet.tar.gz
+$ tar -xf testnet.tar.gz
 ```
 
 ### Running a Validator
 ```bash
-$ echo "<<YourPassword>>" > /Users/topj/bitkubchain/password.sec
+# Initial Genesis Block
+$ ./geth --datadir ./data init genesis.json
 
-$ geth account new  --datadir /Users/topj/bitkubchain --password /Users/topj/bitkubchain/password.sec
+# Generate account password
+$ echo "<<YourPassword>>" > ./data/password.sec
 
-$ geth --datadir /Users/topj/bitkubchain --syncmode snap \
-  --password /Users/topj/bitkubchain/password.sec \
+# Generate new account
+$ ./geth account new  --datadir ./data --password ./data/password.sec
+
+# Run
+$ ./geth --datadir  ./data --syncmode snap \
+  --password ./data/password.sec \
   --mine --unlock 0x<<YourAccountAddress>> \
   --allow-insecure-unlock
 ```
@@ -39,16 +47,20 @@ $ geth --datadir /Users/topj/bitkubchain --syncmode snap \
 ### Running a Fullnode
 
 ```bash
-$ geth --datadir /Users/topj/bitkubchain init /Users/topj/bitkubchain/genesis.json
+# Initial Genesis Block
+$ ./geth --datadir ./data init ./genesis.json
 
-$ geth --datadir /Users/topj/bitkubchain --config /Users/topj/bitkubchain/config.toml--syncmode full
+# Run
+$ ./geth --datadir ./data --config ./config.toml --syncmode full
 ```
 
 
 ### Running a Archivenode
 
 ```bash
-$ geth --datadir /Users/topj/bitkubchain init /Users/topj/bitkubchain/genesis.json
+# Initial Genesis Block
+$ ./geth --datadir ./data init ./genesis.json
 
-$ geth --datadir /Users/topj/bitkubchain --config /Users/topj/bitkubchain/config.toml --syncmode full --gcmode archive
+# Run 
+$ ./geth --datadir ./data --config ./config.toml  --syncmode full --gcmode archive
 ```
