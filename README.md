@@ -65,7 +65,7 @@ $ ./geth account new  --datadir ./data --password ./data/password.sec
 $ ./geth --datadir ./data --config ./config.toml \
   --syncmode snap \
   --password ./data/password.sec \
-  --mine --unlock 0x<<YourAccountAddress>> \
+  --mine --unlock <<YourAccountPublicAddressFromPreviousStep>> \ 
   --allow-insecure-unlock
 ```
 
