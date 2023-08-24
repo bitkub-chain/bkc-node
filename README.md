@@ -62,7 +62,8 @@ $ echo "<<YourPassword>>" > ./data/password.sec
 $ ./geth account new  --datadir ./data --password ./data/password.sec
 
 # Run
-$ ./geth --datadir  ./data --syncmode snap \
+$ ./geth --datadir ./data --config ./config.toml \
+  --syncmode snap \
   --password ./data/password.sec \
   --mine --unlock 0x<<YourAccountAddress>> \
   --allow-insecure-unlock
