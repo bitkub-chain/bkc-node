@@ -19,27 +19,16 @@ RPCTxFeeCap = 1e+01
 [Eth.Miner]
 GasFloor = 65000000
 GasCeil = 65000000
-GasPrice = 5000000000
+GasPrice = 25000000000
 Recommit = 3000000000
 Noverify = false
-
-[Eth.Ethash]
-CacheDir = "ethash"
-CachesInMem = 2
-CachesOnDisk = 3
-CachesLockMmap = false
-DatasetDir = "/root/.ethash"
-DatasetsInMem = 1
-DatasetsOnDisk = 2
-DatasetsLockMmap = false
-PowMode = 0
 
 [Eth.TxPool]
 Locals = []
 NoLocals = true
 Journal = "transactions.rlp"
 Rejournal = 3600000000000
-PriceLimit = 5000000000
+PriceLimit = 25000000000
 PriceBump = 10
 AccountSlots = 16
 GlobalSlots = 10240
