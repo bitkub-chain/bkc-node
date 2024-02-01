@@ -17,8 +17,8 @@ RPCGasCap = 0
 RPCTxFeeCap = 1e+01
 
 [Eth.Miner]
-GasFloor = 65000000
-GasCeil = 65000000
+GasFloor = 90000000
+GasCeil = 90000000
 GasPrice = 25000000000
 Recommit = 3000000000
 Noverify = false
